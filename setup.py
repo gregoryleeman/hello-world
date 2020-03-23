@@ -11,7 +11,7 @@ with open(path.join(here, "requirements.txt")) as f:
 
 setup(
     name="hello_world",
-    version="1.3.1",
+    version="0.1.0",
     description="Tool for setting up coding projects",
     long_description=long_description,
     long_description_content_type="text/markdown",
