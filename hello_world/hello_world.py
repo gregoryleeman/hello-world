@@ -1,6 +1,6 @@
 def hello(name="world"):
 	import jinja2
-	template = jinja2.Template("Hello {{ name }}!")
+	template = jinja2.Template("Hello {{ name }}! :)")
 	return(template.render(name=name))
 
 def hello_single():
