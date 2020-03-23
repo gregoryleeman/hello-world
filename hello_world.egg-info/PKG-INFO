@@ -1,33 +1,26 @@
 Metadata-Version: 2.1
 Name: hello-world
-Version: 1.3.1
+Version: 0.1.0
 Summary: Tool for setting up coding projects
 Home-page: https://github.com/gregbioinf/hello_world
 Author: Gregory Leeman
 Author-email: gregoryleeman@outlook.com
 License: UNKNOWN
-Description: # hello-world
+Description: hello\_world
+        ================
+        Gregory Leeman
         
         A python package and command line tool to say hello to the world.
         
-        ## Docker
+        # Installation
         
-        ```
-        ```
+            $ git clone https://github.com/gregbioinf/hello-world
+            $ cd hello_world
+            $ pip install .
         
-        ## Installation
+        # Quickstart
         
-        ```
-        git clone https://github.com/gregbioinf/hello-world
-        cd hello-world
-        python setup.py
-        ```
-        
-        ## Quickstart
-        
-        ```
-        hello-world
-        ```
+            $ hello
         
 Platform: UNKNOWN
 Requires-Python: >=3.5
