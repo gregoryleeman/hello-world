@@ -10,13 +10,13 @@ A python package and command line tool to say hello to the world.
 ## Installation
 
 ```
-git clone https://github.com/gregbioinf/hello-world
-cd hello-world
-python setup.py
+$ git clone https://github.com/gregbioinf/hello-world
+$ cd hello_world
+$ pip install .
 ```
 
 ## Quickstart
 
 ```
-hello-world
+$ hello
 ```
