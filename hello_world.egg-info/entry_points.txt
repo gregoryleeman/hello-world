@@ -1,4 +1,0 @@
-[console_scripts]
-hello = hello_world.hello_world:hello_single
-hello_file = hello_world.hello_world:hello_file
-
