@@ -24,8 +24,7 @@ setup(
 	package_data = {"": ["data"]},
     entry_points={
         "console_scripts": [
-			"hello = hello_world.hello_world:hello_single",
-			"hello_file = hello_world.hello_world:hello_file"
+			"hello = hello_world.hello_world:main"
         ]
     }
 )

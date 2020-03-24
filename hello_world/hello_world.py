@@ -1,32 +1,32 @@
-def hello(name="world"):
+def hello(what="world"):
 	import jinja2
-	template = jinja2.Template("Hello {{ name }}! :D")
-	return(template.render(name=name))
+	template = jinja2.Template("Hello {{ what }}! :D")
+	return(template.render(what=what))
 
-def hello_single():
+def main():
 	import argparse
 	parser = argparse.ArgumentParser()
-	parser.add_argument("name", default="world", nargs='?', help="What to say hello to")
-	args = parser.parse_args()
-	print(hello(args.name))
-
-def hello_file():
-	import argparse
-	parser = argparse.ArgumentParser(
-		description = "Say hello to all the lines in a file"
+	parser.add_argument(
+		"what",
+		default="world",
+		nargs='?',
+		help="what to say hello to"
 		)
-	parser.add_argument("file", help="Input file path")
-	parser.add_argument("--out", help="Output file path", default="hello.txt")
+	parser.add_argument(
+		'--file',
+		action='store_true',
+		help="file mode (read a file and say hello to each line)"
+		)
 	args = parser.parse_args()
-
-	file_in = open(args.file, "r")
-	file_out = open(args.out, "w")
-	for line in file_in.readlines():
-		file_out.write(hello(line.strip()) + "\n")
-	file_in.close()
-	file_out.close()
-
-	print("Said hello in " + args.out)
+	if args.file:
+		try:
+			file_in = open(args.what, "r")
+			for line in file_in.readlines():
+				print(hello(line.strip()))
+		except:
+			print("Error reading file " + args.what)
+	else:
+		print(hello(args.what))
 
 if __name__ == "__main__":
 	hello_single()
