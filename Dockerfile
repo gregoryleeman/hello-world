@@ -26,9 +26,9 @@ RUN \
 # INSTALL PACKAGE
 RUN \
 	cd /home \
-	&& git clone https://github.com/gregbioinf/hello_world.git \
-	&& cd hello-world \
-	&& python setup.py install \
+	&& git clone https://github.com/gregoryleeman/hello_world.git \
+	&& cd hello_world \
+	&& pip install -e .\
 	&& cd ..
 
 RUN mkdir /ds
@@ -38,4 +38,5 @@ ENV HOME=/ds
 ENV SHELL=/bin/bash
 
 # ENTRY POINT
-CMD ["hello"]
+ENTRYPOINT ["hello"]
+CMD []
